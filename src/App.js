@@ -1,18 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import fetch from 'isomorphic-fetch';
+
+const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
+
 
 class App extends Component {
+
+  
+
+  constructor(props) {
+    super(props);
+    this.fetchSpeeches = this.fetchSpeeches.bind(this);
+    this.state = {
+      result:[]
+    }
+  }
+
+  fetchSpeeches() {
+    fetch(pathBase)
+    .then(response => response.json())
+    .then(response => this.setState({ result:response.Dataobject }));
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Sejmator</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h2>derp</h2>
+        <button onClick={() => this.fetchSpeeches() }>Pobierz dane</button>
+        <ol>{this.state.result.map( (item) => <li>{item.slug}</li> )}</ol>
       </div>
     );
   }
