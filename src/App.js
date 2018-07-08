@@ -29,7 +29,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Sejmator</h1>
         </header>
-        <h2>derp</h2>
+        <h2>Sejmator</h2>
         <button onClick={() => this.fetchSpeeches() }>Pobierz dane</button>
         <ol>{this.state.result.map( (item) => <li>{item.slug}</li> )}</ol>
       </div>
