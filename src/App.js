@@ -33,16 +33,17 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Sejmator</h1>
-        </header>
-        <h2>Sejmator</h2>
-        <button onClick={() => this.fetchSpeeches(this.state.page) }>Pobierz dane</button>
+          <button onClick={() => this.fetchSpeeches(this.state.page) }>Pobierz dane</button>
         <button onClick={() => this.fetchSpeeches(this.state.page - 1) } >Poprzednia strona</button>
-        <button onClick={() => this.fetchSpeeches(this.state.page + 1) }>Następna strona strona</button>
-        <ol>
+        <button onClick={() => this.fetchSpeeches(this.state.page + 1) }>Następna strona</button>
+        
+        </header>
+        
+        <ul>
         {this.state.result.map( (item, index) => 
-          <li key={index}>{item.slug}</li> 
+          <li key={index}>{item.data["poslowie.nazwa"]}</li> 
           )}
-        </ol>
+        </ul>
         
       </div>
     );
