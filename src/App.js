@@ -15,7 +15,7 @@ class App extends Component {
     this.fetchSpeeches = this.fetchSpeeches.bind(this);
     this.state = {
       result:[],
-      page:0
+      page:1
     }
   }
 
@@ -23,9 +23,9 @@ class App extends Component {
     fetch(`${pathBase}?${requestType}&${paramPage}${page}&${term}`)
     .then(response => response.json())
     .then(response => this.setState({ 
-      result:response.Dataobject,
-      page
-     }));
+          result:response.Dataobject,
+          page
+         }));
   }
 
   componentDidMount(){
@@ -35,12 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Sejmator</h1>
-        <button onClick={() => this.fetchSpeeches(this.state.page - 1) } >Poprzednia strona</button>
-        <button onClick={() => this.fetchSpeeches(this.state.page + 1) }>Następna strona</button>
-        
-        </header>
+        <AppHeader currentPage={this.state.page} />
         <table>
           <thead>
             <tr>
@@ -61,13 +56,30 @@ class App extends Component {
           )}
         </tbody>
         </table>
-        
-        
       </div>
     );
   }
 }
 
+class AppHeader extends Component {
 
+  constructor(props){
+    super(props);
+ }
+
+  render(){
+    const { currentPage } = this.props  
+    return <header className="App-header">
+      <h1 className="App-title">Posłowie</h1>
+      <button>Poprzednia strona</button>
+      <button>Następna strona</button>
+      <p>current page is: { this.props.currentPage }</p>
+    </header>
+  }
+
+}
 
 export default App;
+
+/*() => this.fetchSpeeches(this.state.page - 1)
+() => this.fetchSpeeches(this.state.page + 1) */
