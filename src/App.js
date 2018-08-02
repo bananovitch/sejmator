@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import fetch from 'isomorphic-fetch';
-import AppHeader from './AppHeader.js'
+import AppHeader from './Components/AppHeader.js'
+import ResultsTable from './Components/ResultsTable.js'
+
 
 const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
 const requestType =  "_type=objects";
@@ -40,26 +42,9 @@ class App extends Component {
           currentPage={this.state.page} 
           clickHandler={this.fetchSpeeches}
         />
-        <table>
-          <thead>
-            <tr>
-              <th>Imię i nazwisko</th>
-              <th>Klub</th>
-              <th>Frekwencja</th>
-              <th>Liczba wypowiedzi</th>
-            </tr>
-          </thead>
-          <tbody>
-        {this.state.result.map( (item, index) => 
-          <tr key={index}>
-            <td>{item.data["poslowie.nazwa"]}</td>
-            <td>{item.data["sejm_kluby.skrot"]}</td>
-            <td>{item.data["poslowie.frekwencja"]}</td>
-            <td>{item.data["poslowie.liczba_wypowiedzi"]}</td>
-          </tr> 
-          )}
-        </tbody>
-        </table>
+        <ResultsTable 
+          dataArray={this.state.result}
+        />
       </div>
     );
   }

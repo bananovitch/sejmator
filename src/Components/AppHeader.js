@@ -1,4 +1,6 @@
-export default class AppHeader extends Component {
+import React, { Component } from 'react';
+
+class AppHeader extends Component {
   render(){
     const { currentPage, clickHandler } = this.props  
     return <header className="App-header">
@@ -9,3 +11,5 @@ export default class AppHeader extends Component {
   }
 
 }
+
+export default AppHeader;
