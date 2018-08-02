@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import fetch from 'isomorphic-fetch';
+import AppHeader from './AppHeader.js'
 
 const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
 const requestType =  "_type=objects";
@@ -35,7 +36,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AppHeader currentPage={this.state.page} />
+        <AppHeader 
+          currentPage={this.state.page} 
+          clickHandler={this.fetchSpeeches}
+        />
         <table>
           <thead>
             <tr>
@@ -61,25 +65,4 @@ class App extends Component {
   }
 }
 
-class AppHeader extends Component {
-
-  constructor(props){
-    super(props);
- }
-
-  render(){
-    const { currentPage } = this.props  
-    return <header className="App-header">
-      <h1 className="App-title">Posłowie</h1>
-      <button>Poprzednia strona</button>
-      <button>Następna strona</button>
-      <p>current page is: { this.props.currentPage }</p>
-    </header>
-  }
-
-}
-
 export default App;
-
-/*() => this.fetchSpeeches(this.state.page - 1)
-() => this.fetchSpeeches(this.state.page + 1) */
