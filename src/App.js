@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import fetch from 'isomorphic-fetch';
-import AppHeader from './Components/AppHeader.js'
-import ResultsTable from './Components/ResultsTable.js'
+import { AppHeader } from './Components/AppHeader'
+import { Pagination } from './Components/Pagination'
+import { ResultsTable } from './Components/ResultsTable'
 
 
 const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
@@ -31,6 +32,8 @@ class App extends Component {
          }));
   }
 
+  
+
   componentDidMount(){
     this.fetchSpeeches(1);
   }
@@ -38,10 +41,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AppHeader 
+        <Pagination 
           currentPage={this.state.page} 
-          clickHandler={this.fetchSpeeches}
+          changePage={this.fetchSpeeches}
         />
+        <AppHeader/>
         <ResultsTable 
           dataArray={this.state.result}
         />

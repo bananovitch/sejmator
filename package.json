@@ -14,11 +14,17 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test:unit": "mocha --require babel-core/register --require ./test/helpers.js --require ./test/dom.js 'src/**/*.spec.js'"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "es6-promise": "^4.2.4",
     "gh-pages": "^1.2.0",
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "jsdom": "^11.12.0",
+    "mocha": "^5.2.0"
   }
 }

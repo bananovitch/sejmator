@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ResultsTable extends React.Component {
+export class ResultsTable extends React.Component {
 	render() {
 		const { dataArray } = this.props;
 
@@ -25,5 +25,3 @@ class ResultsTable extends React.Component {
 	        </tbody>
 	        </table>}
 }
-
-export default ResultsTable;
