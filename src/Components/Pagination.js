@@ -1,4 +1,7 @@
 import React from 'react';
+import { shallow, mount, render } from 'enzyme';
+
+
 
 export const Pagination = ({ currentPage, changePage }) => (
 	<header className="App-header">

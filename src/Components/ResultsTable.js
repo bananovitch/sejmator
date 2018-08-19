@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class ResultsTable extends React.Component {
-	render() {
-		const { dataArray } = this.props;
-
-		return <table>
+export const ResultsTable = ({ dataArray }) => (
+		<table>
 	          <thead>
 	            <tr>
 	              <th>Imię i nazwisko</th>
@@ -22,6 +19,6 @@ export class ResultsTable extends React.Component {
 	            <td>{item.data["poslowie.liczba_wypowiedzi"]}</td>
 	          </tr> 
 	          )}
-	        </tbody>
-	        </table>}
-}
+	    </tbody>
+	</table>
+)
