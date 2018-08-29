@@ -4,12 +4,17 @@ import fetch from 'isomorphic-fetch';
 import { AppHeader } from './Components/AppHeader'
 import { Pagination } from './Components/Pagination'
 import { ResultsTable } from './Components/ResultsTable'
+import { Menu } from './Components/Menu'
 
 
 const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
 const requestType =  "_type=objects";
 const paramPage = 'page=';
 const term = 'conditions[poslowie.kadencja]=8'
+const navigationItems = [ 
+  { id: 1, text: "First item" },
+  { id: 2, text: "Second item" }  
+]
 
 
 class App extends Component {
@@ -39,6 +44,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Menu items={navigationItems}/>
         <Pagination 
           currentPage={this.state.page} 
           changePage={this.fetchSpeeches}
