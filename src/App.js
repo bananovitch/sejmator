@@ -14,10 +14,10 @@ const paramPage = 'page=';
 const term = 'conditions[poslowie.kadencja]=8'
 const navigationItems = [ 
   { id: 1, text: "Posłowie", href:"poslowie" },
-  { id: 2, text: "Second item", href:"second"}  
+  { id: 2, text: "Przemówienia", href:"speeches"}  
 ]
 
-class dumbComponent2 extends React.Component {
+class speechesTable extends React.Component {
   render () { return <p>some component 2</p> }
 }
 
@@ -25,14 +25,14 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.fetchSpeeches = this.fetchSpeeches.bind(this);
+    this.fetchReps = this.fetchReps.bind(this);
     this.state = {
       result:[],
       page:1
     }
   }
 
-  fetchSpeeches( page = 1 ) {
+  fetchReps( page = 1 ) {
     fetch(`${pathBase}?${requestType}&${paramPage}${page}&${term}`)
     .then(response => response.json())
     .then(response => this.setState({ 
@@ -42,7 +42,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.fetchSpeeches(1);
+    this.fetchReps(1);
   }
 
   render() {
@@ -52,10 +52,10 @@ class App extends Component {
         
         <AppHeader/>
         <Route path="/poslowie" render={ (props) => <ResultsTable {...props} dataArray={this.state.result} />} />
-        <Route path="/second" component={dumbComponent2} />
+        <Route path="/speeches" component={speechesTable} />
         <Pagination 
           currentPage={this.state.page} 
-          changePage={this.fetchSpeeches}
+          changePage={this.fetchReps}
         />
       </div>
     );
