@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ResultsTable = ({ dataArray }) => (
+export const RepsTableDumb = ({ dataArray }) => (
 		<table>
 	          <thead>
 	            <tr>
