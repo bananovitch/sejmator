@@ -6,20 +6,19 @@ import { Pagination } from './Components/Pagination'
 import { ResultsTable } from './Components/ResultsTable'
 import { Menu } from './Components/Menu'
 import { Route } from 'react-router-dom'
-
+import { Description } from './Components/Description';
+import { SpeechesTable } from './Components/SpeechesTable';
 
 const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
 const requestType =  "_type=objects";
 const paramPage = 'page=';
 const term = 'conditions[poslowie.kadencja]=8'
 const navigationItems = [ 
+  { id: 0, text: "Strona główna", href: "" },
   { id: 1, text: "Posłowie", href:"poslowie" },
   { id: 2, text: "Przemówienia", href:"speeches"}  
 ]
 
-class speechesTable extends React.Component {
-  render () { return <p>some component 2</p> }
-}
 
 class App extends Component {
 
@@ -51,8 +50,9 @@ class App extends Component {
         <Menu items={navigationItems}/>
         
         <AppHeader/>
+        <Route exact path="/" component={Description} />
         <Route path="/poslowie" render={ (props) => <ResultsTable {...props} dataArray={this.state.result} />} />
-        <Route path="/speeches" component={speechesTable} />
+        <Route path="/speeches" component={SpeechesTable} />
         <Pagination 
           currentPage={this.state.page} 
           changePage={this.fetchReps}

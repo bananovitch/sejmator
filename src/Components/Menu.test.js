@@ -7,6 +7,8 @@ const listItems = [
 ]
 const wrapper = shallow(<Menu items={ listItems }/>);
 
+
+
 describe("when rendering menu using shallow", () => {
 	it("renders a list element", () => {
 		expect(wrapper.find("ul")).toHaveLength(1);
