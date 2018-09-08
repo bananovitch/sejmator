@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const AppHeader = () => (
-	<h1 className="App-title">Posłowie</h1>
+export const AppHeader = ({ children }) => (
+	<h1 className="App-title">{children}</h1>
 )

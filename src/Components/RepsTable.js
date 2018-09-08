@@ -1,6 +1,7 @@
 import React from 'react';
 import { RepsTableDumb } from './RepsTableDumb';
-import { Pagination } from './Pagination'
+import { Pagination } from './Pagination';
+import { AppHeader } from './AppHeader'
 
 const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
 const requestType =  "_type=objects";
@@ -33,11 +34,12 @@ export class RepsTable extends React.Component {
 
       render() {
         return <div class="poslowie">        
-        <RepsTableDumb dataArray={this.state.result} />
+        <AppHeader>Posłowie</AppHeader>
         <Pagination 
           currentPage={this.state.page} 
           changePage={this.fetchReps}
         />
+        <RepsTableDumb dataArray={this.state.result} />
         </div>
 
       }

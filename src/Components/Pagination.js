@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Pagination = ({ currentPage, changePage }) => (
-	<header className="App-header">
+	<nav>
       <button 
       	onClick={ () => changePage( currentPage - 1 ) }
       	>Poprzednia strona
@@ -9,5 +9,5 @@ export const Pagination = ({ currentPage, changePage }) => (
       <button 
       	onClick={ () => changePage( currentPage + 1 ) }
       >Następna strona</button>
-     </header>
+     </nav>
 )
