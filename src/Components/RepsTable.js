@@ -1,7 +1,8 @@
 import React from 'react';
 import { RepsTableDumb } from './RepsTableDumb';
 import { Pagination } from './Pagination';
-import { AppHeader } from './AppHeader'
+import { AppHeader } from './AppHeader';
+import './RepsTable.css';
 
 const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
 const requestType =  "_type=objects";
