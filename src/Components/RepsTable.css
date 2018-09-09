@@ -1,0 +1,10 @@
+table {
+    width:800px;
+    margin:0 auto;
+}
+tr {
+    border: 1px solid black;
+}
+td {
+    width:25%;
+}
