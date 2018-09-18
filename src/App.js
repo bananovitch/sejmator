@@ -5,6 +5,7 @@ import { Menu } from './Components/Menu'
 import { Route } from 'react-router-dom'
 import { Description } from './Components/Description';
 import { SpeechesTable } from './Components/SpeechesTable';
+import { RepInfoDumb } from './Components/RepInfoDumb';
 
 
 const navigationItems = [ 
@@ -22,7 +23,8 @@ class App extends Component {
       <div className="App">
         <Menu items={navigationItems}/>
         <Route exact path="/" component={Description} />
-        <Route path="/poslowie" component={RepsTable} />
+        <Route exact path="/poslowie" component={RepsTable} />
+        <Route path="/poslowie/test" component={RepInfoDumb} />
         <Route path="/speeches" component={SpeechesTable} />
         
       </div>
