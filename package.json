@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://bananovitch.github.io/sejmator",
   "dependencies": {
+    "async-wait-until": "^1.2.4",
+    "nock": "^10.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.3.1",
