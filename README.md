@@ -18,3 +18,9 @@ Jest to o tyle zastanawiające, że na serwerze testowym mój komponent ma się 
 Zainstalujmy zatem Nock. Tak się skłąda że [ostatnio czytałem na dokładnie ten temat ciekawy artykuł].(https://tech.travelaudience.com/how-to-test-asynchronous-data-fetching-on-a-react-component-ff2ee7433d71)
 
 ... no i minęła dzisiejsza godzina :) Do następnego dnia.
+
+### Dzień 2
+
+Ok, przestańmy na chwilę zajmować się nie działającym testem, zróbmy nowy test dla komponentu pobierającego dane. Okazuje się że dalej coś jest nie tak. Samo wyrenderowanie komponentu korzystającego z `fetch` powoduje wywalenie się testów. 
+
+Uga buga, Po przekopaniu internetów wydaje się, że źródłem problemów jest asynchroniczny kod. No dobra, z tego co widzę to sensownym rozwiązaniem jest skorzystanie z `async/await` w moim komponencie co oznacza że jest potrzebny refactor. Ale to nic.  Skorzystam po raz kolejny z fajnych nowych ficzerów ES :)

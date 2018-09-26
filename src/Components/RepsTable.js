@@ -19,7 +19,7 @@ export class RepsTable extends React.Component {
           page:1
         }
     }
-
+    //TO DO: refactor the fetch to use Async/Await - it will make it testable
     fetchReps( page = 1 ) {
         fetch(`${pathBase}?${requestType}&${paramPage}${page}&${term}`)
         .then(response => response.json())
