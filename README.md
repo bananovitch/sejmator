@@ -15,7 +15,7 @@ Hmmm... Link się nie renderuje dlatego, że korzystam z `shallow`, który nie r
 
 Jest to o tyle zastanawiające, że na serwerze testowym mój komponent ma się doskonale, więc podejrzewam że problem jest z samym testem. OK, szkoda trochę tej godziny - trzeba doczytać dokumentację Routera. Na chwilę obecną zakomentuję ten test.
 
-Zainstalujmy zatem Nock. Tak się skłąda że [ostatnio czytałem na dokładnie ten temat ciekawy artykuł].(https://tech.travelaudience.com/how-to-test-asynchronous-data-fetching-on-a-react-component-ff2ee7433d71)
+Zainstalujmy zatem Nock. Tak się skłąda że [ostatnio czytałem na dokładnie ten temat ciekawy artykuł](https://tech.travelaudience.com/how-to-test-asynchronous-data-fetching-on-a-react-component-ff2ee7433d71).
 
 ... no i minęła dzisiejsza godzina :) Do następnego dnia.
 
