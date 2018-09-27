@@ -24,3 +24,7 @@ Zainstalujmy zatem Nock. Tak się skłąda że [ostatnio czytałem na dokładnie
 Ok, przestańmy na chwilę zajmować się nie działającym testem, zróbmy nowy test dla komponentu pobierającego dane. Okazuje się że dalej coś jest nie tak. Samo wyrenderowanie komponentu korzystającego z `fetch` powoduje wywalenie się testów. 
 
 Uga buga, Po przekopaniu internetów wydaje się, że źródłem problemów jest asynchroniczny kod. No dobra, z tego co widzę to sensownym rozwiązaniem jest skorzystanie z `async/await` w moim komponencie co oznacza że jest potrzebny refactor. Ale to nic.  Skorzystam po raz kolejny z fajnych nowych ficzerów ES :)
+
+### Dzień 3
+
+To był... długi dzień :) Spędziłem zdecydowanie więcej nad tym niż powinienem, ale widać światełko w tunelu. Udało mi się uruchomić test, który teraz co prawda idzie, ale jednak się wywala ze względu na timeout. Do poczytania - jak testować asynchroniczny kod.

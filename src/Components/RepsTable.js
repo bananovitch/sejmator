@@ -4,8 +4,7 @@ import { Pagination } from './Pagination';
 import { AppHeader } from './AppHeader';
 import './RepsTable.css';
 
-const pathBase = "https://api-v3.mojepanstwo.pl/dane/poslowie.json";
-const requestType =  "_type=objects";
+const pathBase = "https://api-v3.mojepanstwo.pl/dane/";
 const paramPage = 'page=';
 const term = 'conditions[poslowie.kadencja]=8'
 
@@ -21,7 +20,7 @@ export class RepsTable extends React.Component {
     }
     //TO DO: refactor the fetch to use Async/Await - it will make it testable
     fetchReps( page = 1 ) {
-        fetch(`${pathBase}?${requestType}&${paramPage}${page}&${term}`)
+        fetch(`${pathBase}?${paramPage}${page}&${term}`)
         .then(response => response.json())
         .then(response => this.setState({ 
               result:response.Dataobject,
