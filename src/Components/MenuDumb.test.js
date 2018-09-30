@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from 'enzyme';
-import { Menu } from './Menu'
+import { MenuDumb } from './MenuDumb'
 import { MemoryRouter } from 'react-router-dom'
 
 const listItems = [ 
@@ -9,7 +9,7 @@ const listItems = [
 ]
 const wrapper = render(
 <MemoryRouter>
-	<Menu items={ listItems }/>
+	<MenuDumb items={ listItems }/>
 </MemoryRouter>
 );
 

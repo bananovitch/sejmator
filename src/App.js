@@ -7,26 +7,23 @@ import { Description } from './Components/Description';
 import { SpeechesTable } from './Components/SpeechesTable';
 import { RepInfoDumb } from './Components/RepInfoDumb';
 
-
-const navigationItems = [ 
-  { id: 0, text: "Strona główna", href: "" },
-  { id: 1, text: "Posłowie", href:"poslowie" },
-  { id: 2, text: "Przemówienia", href:"speeches"}  
-]
-
-
 class App extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      menuToggled: true
+    }
+  }
 
   render() {
     return (
       <div className="App">
-        <Menu items={navigationItems}/>
+        <Menu/>
         <Route exact path="/" component={Description} />
         <Route exact path="/poslowie" component={RepsTable} />
         <Route path="/poslowie/test" component={RepInfoDumb} />
         <Route path="/speeches" component={SpeechesTable} />
-        
       </div>
     );
   }

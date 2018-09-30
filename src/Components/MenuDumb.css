@@ -1,0 +1,19 @@
+.menu {
+    display: block;
+    text-align: left;
+    list-style: none;
+    position:absolute;
+    background-color: #ffffff;
+    left:-999px;
+    transition:0.5s;
+}
+.menu__toggled {
+    visibility: visible;
+    left:0;
+}
+.menu__item {
+    width:150px;
+}
+.menu__item a {
+    text-decoration: none;
+}

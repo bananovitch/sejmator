@@ -28,3 +28,15 @@ Uga buga, Po przekopaniu internetów wydaje się, że źródłem problemów jest
 ### Dzień 3
 
 To był... długi dzień :) Spędziłem zdecydowanie więcej nad tym niż powinienem, ale widać światełko w tunelu. Udało mi się uruchomić test, który teraz co prawda idzie, ale jednak się wywala ze względu na timeout. Do poczytania - jak testować asynchroniczny kod.
+
+### Dzień 4
+
+Co ciekawe udało mi się jeszcze wczoraj uruchomić poprawnie test. Jednakże zauważyłem też, że "przechodzi" on tylko w momencie, gdy uruchamiam go razem ze wszystkimi pozostałymi testami. Jesli uruchomię tylko jeden - wówczas będzie na czerwono. O co chodzi? Nie mogę oprzeć się wrażeniu, że rozwiązanie, które znalazłem w internetach korzysta z jakiegoś "hacku", który niekoniecznie rozwiązuje problem - temat jeszcze do zbadania
+
+### Dzień 5
+Postanowiłem na chwilę odłożyć problematykę testowania i zabrać się za CSS - dotychczas aspekt całkowicie zaniedbany w mojej aplikacji. Jest to tyle interesujące, że mogłem teraz zaznajomić się z tym, jak korzysta się z CSS w środowisuku Reactowym. Otóż co jest na topie? Oczywiście metodyka `BEM`. Przyznam się, że podchodzę do niej trochę jak pies do jeża, ale czemu by nie spróbować?
+
+### Dzień 6
+Jest to o tyle ciekawy dzień, że pracuję w pociągu - nie ma połączenia z internetem. Co oznacza też, że nie ma StackOverflow, Google i dokumentacji. Ale oznacza to też, że nie ma Facebooka i innych rozpraszaczy. Postanowiłem zatem samemu wykombinować, jak zrobić przełączane menu.Poczatkowo musiałe zrefaktorować swoje obecne menu na dwa komponenty - komponent "głupi" i "mądry" - zgodnie z dotychczasowym wzorcem.
+
+Postanowiłem zapisać to, czy menu powinno być widoczne wewnątrz stanu komponentu "mądrego" i napisać metodę przełączającą klasy. Po takim zabiegu jedyne, co właściwie zostało do zrobienia to skorzystać z `transition` żeby dodać ładną animację. 
