@@ -4,7 +4,7 @@ import './MenuDumb.css'
 
 export const MenuDumb = ({ items, toggle, classNames }) => (
 	<header>
-		<button onClick={toggle}>Menu</button>
+		<button onClick={toggle} className="menu__toggle-button">Menu</button>
 		<ul className={classNames}>
 			{ 
 				items.map( (item) => (

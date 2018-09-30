@@ -40,3 +40,5 @@ Postanowiłem na chwilę odłożyć problematykę testowania i zabrać się za C
 Jest to o tyle ciekawy dzień, że pracuję w pociągu - nie ma połączenia z internetem. Co oznacza też, że nie ma StackOverflow, Google i dokumentacji. Ale oznacza to też, że nie ma Facebooka i innych rozpraszaczy. Postanowiłem zatem samemu wykombinować, jak zrobić przełączane menu.Poczatkowo musiałe zrefaktorować swoje obecne menu na dwa komponenty - komponent "głupi" i "mądry" - zgodnie z dotychczasowym wzorcem.
 
 Postanowiłem zapisać to, czy menu powinno być widoczne wewnątrz stanu komponentu "mądrego" i napisać metodę przełączającą klasy. Po takim zabiegu jedyne, co właściwie zostało do zrobienia to skorzystać z `transition` żeby dodać ładną animację. 
+
+Następnym zadadaniem, jakie trzeba wziąć na tapetę, to uresponsywnić takie menu. No i teraz pytanie za 100 pkt. Co z Media Queries? `create-react-app` domyślnie korzysta z Webpacka, który rozszerza możliwość importowania o pliki CSS. Czy oznacza to, że w takim razie będę miał tyle querek ile plików? Na razie wygląda na to, że i tak korzystam tylko z jednej querki, więc w sumie chyba nie jest to jakimś powaznym zmartwieniem.

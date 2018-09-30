@@ -21,12 +21,11 @@ export class Menu extends React.Component {
         const newToggleState = this.state.toggled ? false : true;
         this.setState({toggled: newToggleState})
         if (this.state.toggled) {
-            this.setState({menuClassNames: "menu menu__toggled"})
+            this.setState({menuClassNames: "menu menu--toggled"})
         } else {
             this.setState({menuClassNames: "menu"})
         }
     }
-
 
     render() {
         return <MenuDumb 

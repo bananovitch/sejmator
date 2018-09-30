@@ -2,15 +2,36 @@
     display: block;
     text-align: left;
     list-style: none;
-    position:absolute;
     background-color: #ffffff;
-    left:-999px;
-    transition:0.5s;
 }
-.menu__toggled {
-    visibility: visible;
-    left:0;
+
+.menu__item {
+    display:inline-block;
 }
+
+.menu__toggle-button {
+    display: none;
+}
+
+@media screen and (max-width:720px) {
+    .menu {
+        position:absolute;
+        left:-999px;
+        transition:0.5s;
+    }
+    .menu--toggled {
+        visibility: visible;
+        left:0;
+    }
+    .menu__item {
+        display:block;
+    }
+    .menu__toggle-button {
+        display: block;
+    }
+}
+
+
 .menu__item {
     width:150px;
 }
