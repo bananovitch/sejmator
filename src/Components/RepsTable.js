@@ -2,7 +2,7 @@ import React from 'react';
 import { RepsTableDumb } from './RepsTableDumb';
 import { Pagination } from './Pagination';
 import { AppHeader } from './AppHeader';
-import './RepsTable.css';
+
 
 const pathBase = "https://api-v3.mojepanstwo.pl/dane/";
 const paramPage = 'page=';
@@ -19,7 +19,7 @@ export class RepsTable extends React.Component {
         }
     }
     //TO DO: refactor the fetch to use Async/Await - it will make it testable
-    fetchReps( page = 1 ) {
+      fetchReps( page = 1 ) {
         fetch(`${pathBase}?${paramPage}${page}&${term}`)
         .then(response => response.json())
         .then(response => this.setState({ 
