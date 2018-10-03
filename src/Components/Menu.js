@@ -24,10 +24,8 @@ export class Menu extends React.Component {
         
         if (!this.state.toggled) {
             this.setState({menuClassNames: "menu menu--toggled"})
-            console.log("toggled true")
         } else {
             this.setState({menuClassNames: "menu"})
-            console.log("toggled false")
         }
     }
 

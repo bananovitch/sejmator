@@ -50,3 +50,7 @@ Sen spędza mi z powiek cały czas nieszczęsny test komponentu `RepsTabeDumb`. 
 ### Dzień 8
 
 Och, to już 8 dzień? Stwierdziłem, że spędziłem za dużo czasu nad zagadnieniem tego testu. Na chwilę obecną go usunąłem. Zająłem się drobnym bugiem w kodzie - menu pojawiało się dopiero po drugim kliknięciu. Wszystko jasne - nieprawidłowy warunek. Może dla odmiany odrobina CSS? Mówiąc szczerze nie czuję się zbyt dobrym UI designerem. Jednak założeniem tego projektu było właśnie zmierzenie się z nowymi rzeczami, więc może by tak coś wreszcie zaprojektować?
+
+### Dzień 9
+
+Cóż mogę powiedzieć? Dodałem trochę więcej CSSów. Istniejące przefaktorowałem na wersję mobile-first, menu wygląda nawet responsywnie. Chyba w dalszym ciągu mój mózg potrzebuje odpocząć po móżdżeniu się nad testami :)
