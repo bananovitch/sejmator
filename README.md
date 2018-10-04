@@ -54,3 +54,9 @@ Och, to już 8 dzień? Stwierdziłem, że spędziłem za dużo czasu nad zagadni
 ### Dzień 9
 
 Cóż mogę powiedzieć? Dodałem trochę więcej CSSów. Istniejące przefaktorowałem na wersję mobile-first, menu wygląda nawet responsywnie. Chyba w dalszym ciągu mój mózg potrzebuje odpocząć po móżdżeniu się nad testami :)
+
+### Dzień 10
+
+Zrobiłem ładny gradiencik w nagłówku! Dodałem paddingi! Zrefaktorowałem troszkę komponentów i testów!
+
+Na marginesie, zaczynam już powoli odczuwać że moja aplikacja rośnie i muszę pomyśleć nad jakąś sensowną strukturą komponentów. Inaczej później nie odnajdę się w gąszczu komponentów.
