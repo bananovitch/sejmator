@@ -20,6 +20,10 @@ p {
   width:100%;
 }
 
+.page-content {
+  max-width:1020px;
+  margin: auto;
+}
 
 /* * {
   background-color:rgba(0, 0, 0, 0.1)

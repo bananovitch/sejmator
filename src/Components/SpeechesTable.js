@@ -1,4 +1,5 @@
 import React from 'react';
+import { AppHeader } from './AppHeader'
 
-export const  SpeechesTable = () =>  <p>some component 2</p> 
+export const  SpeechesTable = () =>  <AppHeader>Przemówienia</AppHeader> 
 

@@ -33,15 +33,19 @@ export class RepsTable extends React.Component {
       }
 
       render() {
-        return <div className="poslowie">        
-        <AppHeader>Posłowie</AppHeader>
-        <Pagination 
-          currentPage={this.state.page} 
-          changePage={this.fetchReps}
-        />
-        <RepsTableDumb dataArray={this.state.result} />
-        </div>
-
+        return (
+        <main>
+          <AppHeader>Posłowie</AppHeader>
+          <div className="page-content">        
+          <Pagination 
+            currentPage={this.state.page} 
+            changePage={this.fetchReps}
+          />
+          <RepsTableDumb dataArray={this.state.result} />
+          </div>
+        </main>
+        ) 
+        
       }
 
 }

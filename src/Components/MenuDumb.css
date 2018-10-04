@@ -8,6 +8,7 @@
     box-shadow: 5px 5px 20px 1px rgba(0,0,0,0.1);
     align-items: center;
     margin-top:0;
+    margin-bottom:0;
     width:100%;
     position:absolute;
     left:-100%;

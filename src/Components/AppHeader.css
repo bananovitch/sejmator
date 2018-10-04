@@ -1,5 +1,16 @@
 .App-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3.6rem;
     margin-top: 0;
+    margin-bottom:0;
+}
+.hero-section {
+    min-height:100px;
+    padding-top:32px;
+    padding-bottom:32px;
+    margin-bottom:32px;
+    color:#FFFFFF;
+    background: #000428;
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    background: linear-gradient(to right, #004e92, #000428);
 }
