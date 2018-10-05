@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './RepsTable.css';
 import { Pagination } from './Pagination';
 import { AppHeader } from './AppHeader';
-
-const DumbRepComponent = () => (<h2>Dumb Rep</h2>);
 
 export const RepsTable = ({ dataArray, currentPage, changePage  }) => (
 		<main>
@@ -38,7 +36,7 @@ export const RepsTable = ({ dataArray, currentPage, changePage  }) => (
 				</tbody>
 			</table>
 			
-			<Route path={`/poslowie/1799`} component={DumbRepComponent}/>
+			
 			
 		</div>
 	</main>
