@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { RepsTable } from './Components/RepsTable'
-import { Menu } from './Components/Menu'
+import { RepsTableContainer } from './Components/RepsTableContainer'
+import { MenuContainer } from './Components/MenuContainer'
 import { Route } from 'react-router-dom'
 import { Description } from './Components/Description';
 import { SpeechesTable } from './Components/SpeechesTable';
-import { RepInfoDumb } from './Components/RepInfoDumb';
 
 class App extends Component {
 
@@ -19,10 +18,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Menu/>
+        <MenuContainer/>
         <Route exact path="/" component={Description} />
-        <Route exact path="/poslowie" component={RepsTable} />
-        <Route path="/poslowie/test" component={RepInfoDumb} />
+        <Route exact path="/poslowie/" component={RepsTableContainer} />
         <Route path="/speeches" component={SpeechesTable} />
       </div>
     );

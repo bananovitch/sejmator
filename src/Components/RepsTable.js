@@ -1,41 +1,46 @@
 import React from 'react';
-import { RepsTableDumb } from './RepsTableDumb';
+import { Link, Route } from 'react-router-dom';
+import './RepsTable.css';
+import { Pagination } from './Pagination';
+import { AppHeader } from './AppHeader';
 
-const pathBase = "https://api-v3.mojepanstwo.pl/dane/";
-const paramPage = 'page=';
-const term = 'conditions[poslowie.kadencja]=8'
+const DumbRepComponent = () => (<h2>Dumb Rep</h2>);
 
-export class RepsTable extends React.Component {
-    
-  constructor(props) {
-      super(props);
-      this.fetchReps = this.fetchReps.bind(this);
-      this.state = {
-        result:[],
-        page:1
-      }
-  }
-  //TO DO: refactor the fetch to use Async/Await - it will make it testable
-    fetchReps( page = 1 ) {
-      fetch(`${pathBase}?${paramPage}${page}&${term}`)
-      .then(response => response.json())
-      .then(response => this.setState({ 
-            result:response.Dataobject,
-            page
-            }));
-    }
-
-    componentDidMount() {
-      this.fetchReps(1);
-    }
-
-    render() {
-      return (       
-        <RepsTableDumb 
-          dataArray={this.state.result} 
-          currentPage={this.state.page}
-          changePage={this.fetchReps}
-        />
-      )  
-    }
-}
+export const RepsTable = ({ dataArray, currentPage, changePage  }) => (
+		<main>
+			<AppHeader>Posłowie</AppHeader>
+			<Pagination 
+				currentPage={currentPage} 
+				changePage={changePage}
+			/>
+			<div className="page-content">
+			<table>
+							<thead>
+								<tr>
+									<th>Imię i nazwisko</th>
+									<th>Klub</th>
+									<th>Frekwencja</th>
+									<th>Liczba wypowiedzi</th>
+								</tr>
+							</thead>
+							<tbody>
+						{dataArray.map( (item, index) => 
+							
+							<tr key={index}>
+							
+								<td><Link to={`poslowie/${item.data['ludzie.id']}`}>{item.data["poslowie.nazwa"]}</Link></td>
+								<td>{item.data["sejm_kluby.skrot"]}</td>
+								<td>{item.data["poslowie.frekwencja"]}</td>
+								<td>{item.data["poslowie.liczba_wypowiedzi"]}</td>
+							</tr> 
+							
+							)}
+				</tbody>
+			</table>
+			
+			<Route path={`/poslowie/1799`} component={DumbRepComponent}/>
+			
+		</div>
+	</main>
+	
+)

@@ -1,36 +1,21 @@
 import React from 'react';
-import { MenuDumb } from './MenuDumb';
+import { Link } from 'react-router-dom'
+import './Menu.css'
 
-export class Menu extends React.Component {
-
-    constructor(props){
-        super(props)
-        this.menuToggle = this.menuToggle.bind(this)
-        this.state = {
-            navigationItems : [ 
-                { id: 0, text: "Strona główna", href: "" },
-                { id: 1, text: "Posłowie", href:"poslowie" },
-                { id: 2, text: "Przemówienia", href:"speeches"}  
-            ],
-            toggled: false,
-            menuClassNames: "menu"
-        }
-    }
-
-    menuToggle() {
-        const newClassnames = this.state.toggled? "menu" : "menu menu--toggled"
-        this.setState({
-            toggled: !this.state.toggled,
-            menuClassNames: newClassnames
-        })
-    }
-
-    render() {
-        return <MenuDumb 
-                items={this.state.navigationItems} 
-                toggle={this.menuToggle}
-                classNames={this.state.menuClassNames}
-                />
-    }
-
-}
+export const Menu = ({ items, toggle, classNames }) => (
+	<header>
+		<nav className="site-navigation">
+		<ul className={classNames}>
+			{ 
+				items.map( (item) => (
+					<li key={item.id} className="menu__item">
+						<Link to={ '/' + item.href}>{item.text}</Link>
+					</li>
+					) 
+				) 
+			}
+		</ul>
+		<button onClick={toggle} className="menu__toggle-button">Menu</button>
+		</nav>	
+	</header>
+)

@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme';
-import { RepInfoDumb } from './RepInfoDumb'
+import { RepInfo } from './RepInfo'
 
-const wrapper = shallow(<RepInfoDumb/>)
+const wrapper = shallow(<RepInfo/>)
 
 describe("When rendering", () => {
     it("returns a wrapper element", () => {

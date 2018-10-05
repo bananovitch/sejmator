@@ -1,5 +1,5 @@
 import React from 'react';
-import { RepsTableDumb } from './RepsTableDumb';
+import { RepsTable } from './RepsTable';
 import { shallow } from 'enzyme'
 
 const mockData = [
@@ -13,7 +13,7 @@ mockData[0].data["sejm_kluby.skrot"] = "test klub";
 mockData[0].data["poslowie.frekwencja"] = 0.99;
 mockData[0].data["poslowie.liczba_wypowiedzi"] = 123;
 
-const wrapper = shallow(<RepsTableDumb dataArray={mockData}/>);
+const wrapper = shallow(<RepsTable dataArray={mockData}/>);
 
 describe("When rendering", () => {
 	it("displays a table", () => {
