@@ -5,7 +5,7 @@ import { MenuContainer } from './Components/MenuContainer'
 import { Route } from 'react-router-dom'
 import { Description } from './Components/Description';
 import { SpeechesTable } from './Components/SpeechesTable';
-import { RepInfo } from './Components/RepInfo';
+import { RepInfoContainer } from './Components/RepInfoContainer';
 
 class App extends Component {
 
@@ -23,7 +23,7 @@ class App extends Component {
         <Route exact path="/" component={Description} />
         <Route exact path="/poslowie/" component={RepsTableContainer} />
         <Route path="/speeches" component={SpeechesTable} />
-        <Route path="/poslowie/:id" component={RepInfo}/>
+        <Route path="/poslowie/:id" component={RepInfoContainer}/>
       </div>
     );
   }
