@@ -60,3 +60,7 @@ Cóż mogę powiedzieć? Dodałem trochę więcej CSSów. Istniejące przefaktor
 Zrobiłem ładny gradiencik w nagłówku! Dodałem paddingi! Zrefaktorowałem troszkę komponentów i testów!
 
 Na marginesie, zaczynam już powoli odczuwać że moja aplikacja rośnie i muszę pomyśleć nad jakąś sensowną strukturą komponentów. Inaczej później nie odnajdę się w gąszczu komponentów.
+
+### Dzień 11 i 12
+
+Po chwili odpoczynku stwierdziłem że czas dodać więcej szczegółowych informacji o każdym pośle. Napisałem komponent prezentacyjny, który wyświetla wszystkie podane mu informacje w tabelce. Problemy pojawiły się jednak, gdy zacząłem pisać komponent odpowiedzialny za przesyłanie danych. Łącze tutaj kilka konceptów - parametry URL, przekazywanie ich do stanu i asynchronicznyc fetch. Na razie coś się popsuło. 
