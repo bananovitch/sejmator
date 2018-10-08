@@ -21,9 +21,9 @@ class App extends Component {
       <div className="App">
         <MenuContainer/>
         <Route exact path="/" component={Description} />
-        <Route exact path="/poslowie/" component={RepsTableContainer} />
+        <Route exact path="/poslowie" component={RepsTableContainer} />
         <Route path="/speeches" component={SpeechesTable} />
-        <Route path="/poslowie/:id" component={RepInfoContainer}/>
+        <Route path="/poslowie/:id" component={RepInfoContainer} />
       </div>
     );
   }
