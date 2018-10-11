@@ -26,7 +26,7 @@ export const RepsTable = ({ dataArray, currentPage, changePage  }) => (
 							
 							<tr key={index}>
 							
-								<td><Link to={`poslowie/${item.data['ludzie.id']}`}>{item.data["poslowie.nazwa"]}</Link></td>
+								<td><Link to={`poslowie/${item.id}`}>{item.data["poslowie.nazwa"]}</Link></td>
 								<td>{item.data["sejm_kluby.skrot"]}</td>
 								<td>{item.data["poslowie.frekwencja"]}</td>
 								<td>{item.data["poslowie.liczba_wypowiedzi"]}</td>
