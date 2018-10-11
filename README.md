@@ -65,6 +65,10 @@ Na marginesie, zaczynam już powoli odczuwać że moja aplikacja rośnie i musz�
 
 Po chwili odpoczynku stwierdziłem że czas dodać więcej szczegółowych informacji o każdym pośle. Napisałem komponent prezentacyjny, który wyświetla wszystkie podane mu informacje w tabelce. Problemy pojawiły się jednak, gdy zacząłem pisać komponent odpowiedzialny za przesyłanie danych. Łącze tutaj kilka konceptów - parametry URL, przekazywanie ich do stanu i asynchronicznyc fetch. Na razie coś się popsuło. 
 
-### Dzień 14
+### Dzień 13
 
 Udało mi się odkryć czemu URL nie działał - odwoływałem się do nieistniejącego obiektu. Napotkałem inny problem - React próbuje renderować niższy komponent, zanim ten otrzyma dane. Hmmm chyba trzeba coś tu wymyślić. 
+
+### Dzień 14
+
+Jestem strasznie zmęczony. Ciężko się pracuje po ciężkim dniu, jednak dalej próbuję wyrenderować komponent tylko wtedy gdy ma on dane - niestety na razie bezskutecznie.

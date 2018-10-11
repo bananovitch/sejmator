@@ -8,14 +8,14 @@ export class RepInfoContainer extends React.Component {
         this.fetchRepInfo = this.fetchRepInfo.bind(this);
         this.state = {
             repId: null,
-            repData:null
+            repData:{}
         }
     };
 
     fetchRepInfo( repId ) {
         fetch(`https://api-v3.mojepanstwo.pl/dane/poslowie/${repId}`)
         .then(response => response.json())
-        .then(response => this.setState({repData:response}));
+        .then(response => this.setState({repData:response.data}));
       }
 
      componentDidMount() {
@@ -26,7 +26,7 @@ export class RepInfoContainer extends React.Component {
 
 
     render() {
-        return(<p>{JSON.stringify(this.state.repData)}</p>)
+        return(<RepInfo Rep={this.state.repData}/>)
     };
 
 }
