@@ -35,14 +35,14 @@
 
 a,
 a:visited {
-    text-decoration: none;
-    color:#0097e6;
+    text-decoration: none; 
+    color:#004e92;
     transition: all 0.3s;
 }
 
 a:hover,
 a:focus {
-    color:#e84118;
+    color:#94002c;
 }
 
 .menu__toggle-button {
