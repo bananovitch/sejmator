@@ -10,6 +10,7 @@ export const RepsTable = ({ dataArray, currentPage, changePage  }) => (
 			<Pagination 
 				currentPage={currentPage} 
 				changePage={changePage}
+				totalPages={11}
 			/>
 			<div className="page-content">
 			<table>

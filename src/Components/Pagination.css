@@ -1,3 +1,11 @@
 .pagination {
     text-align:center;
+    margin-bottom:2rem;
+}
+.pagination__button {
+    background:none;
+    border: 1px solid #bfbfbf;
+    height:4rem;
+    min-width:4rem;
+    cursor:pointer;
 }
